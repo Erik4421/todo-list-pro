@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background-color: #3c4973;
+    top: 0;
+    left: 0;
+}
+

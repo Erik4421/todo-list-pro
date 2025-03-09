@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background: #e6eaed;
+}
+
+main {
+    padding-top: 12vh;
+}
+
+/* Estiliza a largura e altura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;  /* Largura da barra vertical */
+    height: 10px; /* Altura da barra horizontal */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+
+    border-radius: 5px; 
+}
+
+/* Cor e formato do "puxador" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #3c4973; 
+    border-radius: 5px; 
+    opacity: 5%;
+}
+
+/* Efeito ao passar o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
