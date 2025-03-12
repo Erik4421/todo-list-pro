@@ -1,16 +1,21 @@
-import Header from "./components/Header/index";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
 
 import "./static/body.css";
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
 
-      <Header />
-      <main>
-      </main>
-    </div>
+        <Route path="*" element={<h1>Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
