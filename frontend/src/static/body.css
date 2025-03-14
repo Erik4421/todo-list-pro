@@ -7,6 +7,11 @@ main {
     padding-top: 12vh;
 }
 
+.main-login {
+    display: flex;
+    justify-content: center;
+}
+
 /* Estiliza a largura e altura da barra de rolagem */
 ::-webkit-scrollbar {
     width: 10px;  /* Largura da barra vertical */

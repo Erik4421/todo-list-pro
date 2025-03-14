@@ -1,12 +1,5 @@
-.header{
-    /* display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: 10vh;
-    position: fixed;
-    background-color: #3c4973;
-    top: 0;
-    left: 0; */
+html, body {
+    overflow-x: hidden;
 }
 
 nav {
@@ -15,7 +8,7 @@ nav {
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
-    height: 8vh;
+    height: auto;
 }
 
 .nav-list {
@@ -43,11 +36,11 @@ nav {
 
 @media (max-width: 999px) {
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .nav-list {
-        position: absolute;
+        position: fixed;
         top: 8vh;
         right: 0;
         width: 50vw;
@@ -56,7 +49,9 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        transition: transform 0.3s ease-in-out;
         transform: translateX(100%);
+        z-index: 1000; /* Garante que fique acima de outros elementos */
     }
 
     .nav-list li {

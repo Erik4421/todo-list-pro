@@ -1,0 +1,37 @@
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+form input {
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    height: 35px;
+}
+
+main {
+    background-size: cover;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+.button-register {
+    border: none;
+    width: 40%;
+    cursor: pointer;
+}

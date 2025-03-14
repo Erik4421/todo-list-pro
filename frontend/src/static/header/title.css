@@ -3,7 +3,11 @@ h1 {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3vh;
-    background-color: rebeccapurple;
     color: white;
     margin: 0;
+}
+
+p {
+    color: white;
+    text-decoration: underline;
 }

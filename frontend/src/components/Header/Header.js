@@ -1,14 +1,25 @@
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-import React, { useState } from "react";
+import Title from "./Title";
+
 import "./../../static/header/header.css";
-import "./../../static/header/title.css";
 import "./../../static/header/link.css";
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
+
+  // Mapeia os títulos das páginas com base na rota
+  const pageTitles = {
+    "/": "Home",
+    "/config": "Configurações",
+    "/login": "Login",
+  };
+
+  const pageTitle = pageTitles[location.pathname] || "Not Found";
 
   const handleToggleMenu = () => {
-    console.log("click");
     setIsActive(!isActive);
   };
 
@@ -16,7 +27,7 @@ export default function Header() {
   return (
     <header className='header'>
         <nav>
-          <h1>TodoList</h1>
+          <Title page={pageTitle} />
 
           <div className='mobile-menu' onClick={handleToggleMenu}>
             <div className="line1"></div>
