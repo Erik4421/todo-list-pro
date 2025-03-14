@@ -6,7 +6,7 @@ import Card from "./../../components/Card/Card";
 /* Static */
 import "./../../static/login/login.css";
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
 
   return (
@@ -16,12 +16,13 @@ export default function Login() {
       <Card className="card">
       
         <form action="">
+          <input type="text" placeholder="Nome"/>
           <input type="text" placeholder="Email"/>
           <input type="password" placeholder="Senha"/>
-          <button type="submit">Login</button>
+          <input type="password" placeholder="Repetir Senha"/>
+          <button type="submit" onClick={() => navigate("/login")}>Cadastrar</button>
         </form>
 
-        <button type="submit" className="button-register" onClick={() => navigate("/login/register")}>Criar Conta</button>
       
       </Card>
     </main>

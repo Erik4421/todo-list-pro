@@ -15,6 +15,7 @@ export default function Header() {
     "/": "Home",
     "/config": "Configurações",
     "/login": "Login",
+    "/login/register": "Register",
   };
 
   const pageTitle = pageTitles[location.pathname] || "Not Found";
