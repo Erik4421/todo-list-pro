@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tasks")
+@Table(name = "tasks_table")
 public class Task {
 
     public enum TaskStatus {
@@ -33,7 +33,8 @@ public class Task {
     private LocalDateTime createdAt = LocalDateTime.now();
 
 
-    
+    //Constructors
+    public Task() {}
 
      public Task(Long id, String title, String description, TaskStatus status, User user, LocalDateTime createdAt) {
         this.id = id;
@@ -91,6 +92,12 @@ public class Task {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Task [id=" + id + ", title=" + title + ", description=" + description + ", status=" + status + ", user="
+                + user + ", createdAt=" + createdAt + "]";
     }
 
 }
