@@ -16,6 +16,7 @@ export default function Header() {
     "/config": "Configurações",
     "/login": "Login",
     "/login/register": "Register",
+    "/login/registered": "Registered",
   };
 
   const pageTitle = pageTitles[location.pathname] || "Not Found";

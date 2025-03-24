@@ -3,6 +3,9 @@ package com.example.todolist.models;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "tasks_table")
 public class Task {
@@ -78,8 +81,14 @@ public class Task {
         this.status = status;
     }
 
+    @JsonIgnore
     public User getUser() {
         return user;
+    }
+    
+    @JsonProperty("userName")
+    public String getUserName() {
+        return user != null ? user.getName() : null;
     }
 
     public void setUser(User user) {

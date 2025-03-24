@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -26,6 +29,17 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks;
 
+    // Constructors
+    public User() {}
+
+    public User(Long id, String name, String email, String password, LocalDateTime createdAt, List<Task> tasks) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.tasks = tasks;
+    }
 
     // Getters e Setters
     public Long getId() {
@@ -68,6 +82,7 @@ public class User {
         this.createdAt = createdAt;
     }
 
+    @JsonIgnore
     public List<Task> getTasks() {
         return tasks;
     }
